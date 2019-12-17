@@ -9,7 +9,7 @@ int main(void)
     int m_subject,n_student;
     int i;
     char teacher_id[40];
-    char regno_student[20];
+    char reg_no_student[20];
     char course_titile[40];
     char batch[5]="";
     char degree[5]="";
@@ -77,12 +77,12 @@ int main(void)
                 strcat(dump1,roll_no);
                 strcpy(roll_no,dump1);
             }
-            strcat(strcat(strcat(strcat(strcpy(regno_student,batch),"-"),degree),"-"),roll_no);
-            printf("%s",regno_student);
+            strcat(strcat(strcat(strcat(strcpy(reg_no_student,batch),"-"),degree),"-"),roll_no);
+            printf("%s",reg_no_student);
             fputs(teacher_id,fp);
             position = ftell(fp)+t_lenght;
             fseek(fp,position,0);
-            fputs(regno_student,fp);
+            fputs(reg_no_student,fp);
             position = position+20;
             fseek(fp,position,0);
             fputs(course_titile,fp);
